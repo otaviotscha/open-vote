@@ -1,7 +1,6 @@
 {
   "name": "open-vote",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": {
     "url": "https://github.com/otaviotscha/open-vote.git",
     "type": "git"
@@ -13,8 +12,16 @@
     "prepare": "husky install",
     "postinstall": "husky install",
     "prepack": "pinst --disable",
-    "postpack": "pinst --enable"
+    "postpack": "pinst --enable",
+    "build": "yarn workspaces foreach run build",
+    "compile": "yarn build"
   },
+  "workspaces": [
+    "api/rest",
+    "application",
+    "entities",
+    "repositories"
+  ],
   "devDependencies": {
     "@commitlint/cli": "^17.6.7",
     "@commitlint/config-conventional": "^17.6.7",
