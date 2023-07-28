@@ -1,0 +1,12 @@
+{
+  "name": "open-vote",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "url": "https://github.com/otaviotscha/open-vote.git",
+    "type": "git"
+  },
+  "author": "Otávio L. Tschá <otavio.tscha.sting@gmail.com>",
+  "license": "MIT",
+  "packageManager": "yarn@3.6.1"
+}
