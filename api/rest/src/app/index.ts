@@ -1,10 +1,13 @@
 import cors from 'cors'
-import express from 'express'
+import express, { json } from 'express'
+
+import router from 'rest/routes'
 
 const app = express()
 
 app.use(cors())
+app.use(json())
 
-app.get('/', (req, res) => res.send({ ok: 'OK' }))
+app.use(router)
 
 export default app
