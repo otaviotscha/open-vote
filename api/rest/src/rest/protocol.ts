@@ -3,6 +3,7 @@ export interface IRequest {
   headers: any
   params: any
   query: any
+  body: any
 }
 
 export interface IResponse {

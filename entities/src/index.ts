@@ -1,3 +1,3 @@
-export const fooEntities = () => {
-  console.log('fooEntities')
-}
+// TODO: validation schemas using zod
+
+export * from './types/generalEntity'

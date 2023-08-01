@@ -1,6 +1,7 @@
 {
   "name": "repositories",
   "main": "dist/src/index.js",
+  "type": "module",
   "scripts": {
     "build:clean": "rm dist -rf",
     "build": "yarn build:clean && yarn tsc --build",
