@@ -2,8 +2,8 @@ import { HealthCheckController } from 'rest/controllers/healthCheck'
 import { makeHealthCheckService } from 'factories/services/healthCheck'
 
 export const makeHealthCheckController = () => {
-  const healthCheckServide = makeHealthCheckService()
+  const healthCheckService = makeHealthCheckService()
 
-  const healthCheckController = new HealthCheckController(healthCheckServide)
+  const healthCheckController = new HealthCheckController(healthCheckService)
   return healthCheckController
 }

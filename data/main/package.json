@@ -1,15 +1,19 @@
 {
-  "name": "application",
+  "name": "data-main",
   "main": "dist/src/index.js",
   "type": "module",
   "scripts": {
+    "prisma:generate": "yarn prisma generate",
     "build:clean": "rm dist -rf",
-    "build": "yarn build:clean && yarn tsc --build",
+    "build": "yarn build:clean && yarn prisma:generate && yarn tsc --build",
     "compile": "yarn build",
     "postinstall": "yarn build",
     "lint": "eslint --ignore-path .eslintignore --ext .ts src/",
     "lint:fix": "yarn lint --fix",
     "check-types": "yarn tsc --noemit"
+  },
+  "dependencies": {
+    "@prisma/client": "5.1.1"
   },
   "devDependencies": {
     "@types/eslint": "^8",
@@ -20,6 +24,10 @@
     "eslint-config-prettier": "^8.9.0",
     "eslint-plugin-prettier": "^5.0.0",
     "prettier": "^3.0.0",
+    "prisma": "latest",
     "typescript": "^5.1.6"
+  },
+  "prisma": {
+    "schema": "src/prisma/schema.prisma"
   }
 }

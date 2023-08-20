@@ -11,6 +11,12 @@ const env = cleanEnv(process.env, {
   }),
   REST_API_PORT: port({ default: 3000 }),
   REST_API_TIMEOUT_IN_SECONDS: num({ default: 60, devDefault: 120 }),
+  DATABASE_URL: str(),
 })
 
-export const { NODE_ENV, REST_API_PORT, REST_API_TIMEOUT_IN_SECONDS } = env
+export const {
+  NODE_ENV,
+  REST_API_PORT,
+  REST_API_TIMEOUT_IN_SECONDS,
+  DATABASE_URL,
+} = env
